@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+* {
+  transition: all 200ms ease-in-out;
+}
+
+@theme {
+  --breakpoint-xxs: 21.25rem; /* COMMENT: 340px */
+  --breakpoint-xs: 23.125rem; /* COMMENT: 363px */
+  --breakpoint-xxl: 82.5rem; /* COMMENT: 1320px */
+  --color-picto-primary: #9929fb;
+  --color-picto-primary-dark: #650fa0;
+  --color-soft-white: #f0f1f3;
+  --color-soft-dark: #87909d;
+}
+
+.btn-primary {
+  @apply bg-picto-primary border-0 text-white hover:scale-105 hover:bg-picto-primary-dark transition-all duration-500;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+.content {
+  @apply max-xxl:w-full xxl:max-w-[1320px] xxl:mx-auto;
+}
+
+.section-title {
+  @apply md:font-semibold text-3xl sm:text-4xl md:text-5xl font-medium;
+}
+
+.center {
+  @apply flex justify-center items-center;
+}
+
+.introduction-profile-background {
+  background: radial-gradient(
+      circle at 12% 100%,
+      #ffe2b0f5 1% 5px,
+      transparent 15%
+    ),
+    radial-gradient(circle at 95% -15%, #da4df166 5%, transparent 30%),
+    radial-gradient(circle at center right, #c4f5e9b2 2%, transparent 35%);
+}
+
+.blog-background {
+  background: radial-gradient(circle at -10% 0%, #da4df166 1%, transparent 25%),
+    radial-gradient(circle at 110% 30%, #c4f5e9b2 5%, transparent 25%);
+}
+
+html[data-theme="dark"] body {
+  background: #0b1120;
+  color: #e2e8f0;
+}
+
+html[data-theme="dark"] .bg-white,
+html[data-theme="dark"] .bg-soft-white {
+  background-color: #111827 !important;
+}
+
+html[data-theme="dark"] .text-gray-600 {
+  color: #d1d5db !important;
+}
+
+html[data-theme="dark"] .text-gray-500,
+html[data-theme="dark"] .text-gray-400 {
+  color: #9ca3af !important;
+}
+
+html[data-theme="dark"] .border-gray-300 {
+  border-color: #334155 !important;
+}
+
+html[data-theme="dark"] .dark-shadow {
+  box-shadow: 0 0 90px 9px rgba(255, 255, 255, 0.05) !important;
+}

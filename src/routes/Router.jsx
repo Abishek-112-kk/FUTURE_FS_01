@@ -6,6 +6,17 @@ const Main = lazy(() => import("../layouts/Main"));
 
 const repoName = import.meta.env.VITE_REPO_NAME || "";
 const basename = repoName ? `/${repoName}` : "";
+import { createBrowserRouter } from "react-router-dom";
+import App from "./App";
+import ErrorPage from "./ErrorPage";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <ErrorPage />,
+  },
+]);
 
 export const router = createBrowserRouter(
   [

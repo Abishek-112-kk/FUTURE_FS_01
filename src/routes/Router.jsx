@@ -1,8 +1,7 @@
 import { lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import Loading from "../components/common/loading/Loading";
-import ErrorPage from "../pages/ErrorPage"; // Change the path if needed
-
+import ErrorPage from "../components/common/error/ErrorPage";
 const Home = lazy(() => import("../pages/Home"));
 const Main = lazy(() => import("../layouts/Main"));
 
